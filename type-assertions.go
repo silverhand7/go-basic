@@ -1,16 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func random() interface{} {
 	return "Random"
 }
 
 func randomElement() interface{} {
-	// var elements interface{} = []interface{}{1, 2, "apple", true, false} // gagal, I want to make array with different data types and return random element
-	// return elements
-	// return "String"
-	return 1
+	var elements []interface{} = []interface{}{1, 2, "apple", true, false}
+	return elements[rand.Intn(len(elements))]
 }
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 
 	fmt.Println(resultString)
 
-	var randomEl interface{} = randomElement()
+	randomEl := randomElement()
 
 	switch value := randomEl.(type) {
 	case string:
