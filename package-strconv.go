@@ -23,4 +23,8 @@ func main() {
 
 	number, _ := strconv.ParseInt("10000", 10, 64)
 	fmt.Println(number)
+
+	number2, _ := strconv.Atoi("2000")
+	fmt.Println(number2)
+
 }
